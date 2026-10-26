@@ -87,8 +87,8 @@ export default function App() {
   return <div style={{ display: 'flex', flexDirection: narrow ? 'column' : 'row', height: '100dvh', background: '#0a0a0c', color: '#e4e4e7', fontFamily: '"Inter Variable", Inter, system-ui, sans-serif', colorScheme: 'dark' }}>
     {!narrow && <aside style={{ width: 220, flexShrink: 0, display: 'flex', flexDirection: 'column', gap: 2, padding: '14px 12px', background: '#0d0d10', borderRight: '1px solid rgba(255,255,255,.06)', overflowY: 'auto', boxSizing: 'border-box' }}>
       <a href="#/" style={{ display: 'flex', alignItems: 'center', gap: 8, padding: '0 6px', marginBottom: 14 }}>
-        <div style={{ width: 24, height: 24, borderRadius: 6, background: 'linear-gradient(135deg,#8b5cf6,#d946ef)', display: 'grid', placeItems: 'center', fontSize: 11, fontWeight: 700, color: '#fff' }}>A</div>
-        <span style={{ fontSize: 13, fontWeight: 600, color: '#f4f4f5' }}>Agent Console</span>
+        <div style={{ width: 24, height: 24, borderRadius: 6, background: 'linear-gradient(135deg,#8b5cf6,#d946ef)', display: 'grid', placeItems: 'center', fontSize: 11, fontWeight: 700, color: '#fff' }}>N</div>
+        <span style={{ fontSize: 13, fontWeight: 600, color: '#f4f4f5' }}>needsyou</span>
         {CONFIG.source === 'demo' && <span style={{ marginLeft: 'auto', fontSize: 11, padding: '1px 6px', borderRadius: 999, background: 'rgba(129,140,248,.15)', color: '#a5b4fc' }}>demo</span>}
       </a>
       {NAV.map((it, n) => <div key={it.key}>

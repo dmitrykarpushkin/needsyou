@@ -128,7 +128,7 @@ Optional; without an entry a row shows its own title and status only.
                "steps": [ { "role": "triage", "verdict": "go", "ts": "..." } ], "last": { "ts": "..." } } ] }
 ```
 
-The `lab/board.json` written by [agent-lab](https://github.com/dmitrykarpushkin/agent-lab) (`lab.py export`) has this shape and can be served as `lab.json` as is;
+The `lab/board.json` written by [foureyes](https://github.com/dmitrykarpushkin/foureyes) (`lab.py export`) has this shape and can be served as `lab.json` as is;
 it has no `phrase`/`why`, so the page shows `title`.
 
 `state`: `active`, `parked` (waits for the owner; counted in "Needs you"), `done`, `dropped`. Submitters named `news-scout` and `scout-*` appear as the two scout rows on the Agents page.

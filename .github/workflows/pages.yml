@@ -1,5 +1,5 @@
 # Builds the demo (VITE_DATA_SOURCE=demo, the default) and publishes it to GitHub Pages.
-# vite.config.ts uses base './', so the page works under /agent-console/ without extra settings.
+# vite.config.ts uses base './', so the page works under /needsyou/ without extra settings.
 # Enable once: repository Settings -> Pages -> Source: GitHub Actions.
 name: Deploy demo to Pages
 on:
