@@ -1,0 +1,44 @@
+{
+ "generated": "2026-10-26T08:57:00Z",
+ "owner": {
+  "login": "demo-owner",
+  "name": "Demo Owner"
+ },
+ "projects": [
+  {
+   "id": "api-service",
+   "name": "API service",
+   "color": "#7C66DC",
+   "icon": "◆",
+   "blocking": true,
+   "repos": [
+    "example/api-service"
+   ],
+   "links": [
+    {
+     "name": "Staging",
+     "url": "https://staging.example.com",
+     "about": "staging deploy of the API"
+    }
+   ]
+  },
+  {
+   "id": "research",
+   "name": "Research",
+   "color": "#12A87A",
+   "icon": "▲",
+   "repos": [
+    "example/research-notes"
+   ]
+  },
+  {
+   "id": "home-automation",
+   "name": "Home automation",
+   "color": "#0EA5E9",
+   "icon": "●",
+   "repos": [
+    "example/home-automation"
+   ]
+  }
+ ]
+}

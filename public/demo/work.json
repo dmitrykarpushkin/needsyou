@@ -1,0 +1,71 @@
+{
+ "work": [
+  {
+   "id": "w-orders",
+   "project": "api-service",
+   "state": "open",
+   "title": "Paginate /orders",
+   "status": "Builder is writing cursor pagination; tests are next.",
+   "summary": "Large accounts time out on the unpaginated order list. The change adds a cursor and keeps the old call working for one release.",
+   "changed": "the contract tests for the old call are green.",
+   "roles": [
+    {
+     "name": "Planner",
+     "does": "wrote 7 acceptance criteria",
+     "state": "done"
+    },
+    {
+     "name": "Builder",
+     "does": "cursor pagination",
+     "state": "going",
+     "note": "2 of 7 criteria"
+    },
+    {
+     "name": "Verifier",
+     "does": "checks every criterion with fresh eyes",
+     "state": "waiting"
+    }
+   ],
+   "pr": {
+    "n": 221,
+    "state": "draft"
+   },
+   "plan": {
+    "done": 2,
+    "total": 7
+   }
+  },
+  {
+   "id": "w-bench",
+   "project": "research",
+   "state": "open",
+   "title": "Retrieval vs long context",
+   "status": "Re-grading the 40 tasks where two judges disagreed.",
+   "roles": [
+    {
+     "name": "Runner",
+     "does": "ran 400 tasks on two models",
+     "state": "done"
+    },
+    {
+     "name": "Grader",
+     "does": "second pass on disagreements",
+     "state": "going"
+    },
+    {
+     "name": "Reviewer",
+     "does": "reads the analysis against the question",
+     "state": "waiting"
+    }
+   ],
+   "pr": {
+    "n": 37,
+    "state": "review"
+   },
+   "plan": {
+    "done": 4,
+    "total": 9
+   }
+  }
+ ]
+}

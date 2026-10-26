@@ -1,0 +1,60 @@
+{
+ "agents": {
+  "lab:news-scout": {
+   "name": "News scout",
+   "what": "Reads a fixed list of engineering blogs and release notes and submits ideas worth trying, each with a source link.",
+   "when": "When a session asks it for fresh ideas."
+  },
+  "lab:scout": {
+   "name": "Code scouts",
+   "what": "Walk one area of the code each and submit small fixes they think are worth doing, each with a file and line.",
+   "when": "Twice a week."
+  },
+  "lab:triage": {
+   "name": "Triage",
+   "what": "Checks that an idea has a source and is worth the work; takes it, drops it, or parks it for your word.",
+   "when": "Every 30 minutes while ideas wait."
+  },
+  "lab:method": {
+   "name": "Method picker",
+   "what": "Chooses how deep the written plan must be for the size of the change.",
+   "when": "After triage takes an idea."
+  },
+  "lab:builder": {
+   "name": "Builder",
+   "what": "Makes the change on a branch, following the plan.",
+   "when": "When an idea has a method."
+  },
+  "lab:tester": {
+   "name": "Tester",
+   "what": "Runs the tests and the checks against the builder's branch.",
+   "when": "After each build."
+  },
+  "lab:applier": {
+   "name": "Applier",
+   "what": "Merges a tested change into the main branch once the plan allows it.",
+   "when": "After the tester passes."
+  },
+  "lab:retro": {
+   "name": "Retro",
+   "what": "Records whether the chosen method worked, so the next pick is better informed.",
+   "when": "After validation."
+  },
+  "lab:validator": {
+   "name": "Validator",
+   "what": "A fresh agent that did not see the builder's reasoning checks the result against the plan's criteria.",
+   "when": "Last, before an idea counts as shipped."
+  },
+  "thread:s-api-ratelimit": {
+   "name": "Rate limiting rollout",
+   "what": "Rolls out per-key rate limiting on the public API."
+  },
+  "thread:s-research-bench": {
+   "name": "Benchmark runner",
+   "what": "Runs the retrieval vs long-context benchmark and keeps the grader honest."
+  },
+  "service:sentinel": {
+   "what": "Watches the other services and opens an ask when one of them fails twice in a row."
+  }
+ }
+}

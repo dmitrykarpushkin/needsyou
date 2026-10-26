@@ -1,0 +1,128 @@
+{
+ "built": "2026-10-26T08:56:00Z",
+ "projects": {
+  "api-service": {
+   "repo": "example/api-service",
+   "open": [
+    {
+     "n": 214,
+     "title": "Add per-key rate limiting middleware",
+     "url": "https://github.com/example/api-service/pull/214",
+     "draft": false,
+     "why": "Protects the public API from bursty clients without touching the handlers.",
+     "author": "demo-owner",
+     "updated": "2026-10-26T08:20:00Z",
+     "age_days": 2,
+     "waiting": [
+      {
+       "k": "ready"
+      }
+     ],
+     "done": 6,
+     "total": 6,
+     "base": "main"
+    },
+    {
+     "n": 219,
+     "title": "Move session storage to Redis",
+     "url": "https://github.com/example/api-service/pull/219",
+     "draft": false,
+     "why": "Sessions survive a restart and can be shared by two replicas.",
+     "author": "teammate-a",
+     "updated": "2026-10-26T06:50:00Z",
+     "age_days": 1,
+     "waiting": [
+      {
+       "k": "review",
+       "who": [
+        "demo-owner"
+       ]
+      }
+     ],
+     "done": 3,
+     "total": 5,
+     "base": "main"
+    },
+    {
+     "n": 221,
+     "title": "Paginate the /orders endpoint",
+     "url": "https://github.com/example/api-service/pull/221",
+     "draft": true,
+     "why": "Large accounts time out on the unpaginated list.",
+     "author": "demo-owner",
+     "updated": "2026-10-26T08:48:00Z",
+     "age_days": 0,
+     "waiting": [
+      {
+       "k": "running"
+      }
+     ],
+     "done": 2,
+     "total": 7,
+     "base": "main"
+    }
+   ],
+   "merged": [
+    {
+     "n": 209,
+     "title": "Return 422 instead of 500 on bad JSON",
+     "url": "https://github.com/example/api-service/pull/209",
+     "merged_at": "2026-10-25T07:00:00Z",
+     "author": "demo-owner"
+    },
+    {
+     "n": 205,
+     "title": "Structured request logging",
+     "url": "https://github.com/example/api-service/pull/205",
+     "merged_at": "2026-10-23T11:00:00Z",
+     "author": "demo-owner"
+    }
+   ]
+  },
+  "research": {
+   "repo": "example/research-notes",
+   "open": [
+    {
+     "n": 37,
+     "title": "Analysis: retrieval vs long context on 400 tasks",
+     "url": "https://github.com/example/research-notes/pull/37",
+     "draft": false,
+     "why": "Compares the two approaches on the same task set with the same grader.",
+     "author": "demo-owner",
+     "updated": "2026-10-26T04:00:00Z",
+     "age_days": 3,
+     "waiting": [
+      {
+       "k": "changes"
+      }
+     ],
+     "done": 4,
+     "total": 9,
+     "base": "main"
+    }
+   ],
+   "merged": [
+    {
+     "n": 35,
+     "title": "Grader prompt v3 with rubric",
+     "url": "https://github.com/example/research-notes/pull/35",
+     "merged_at": "2026-10-24T07:00:00Z",
+     "author": "demo-owner"
+    }
+   ]
+  },
+  "home-automation": {
+   "repo": "example/home-automation",
+   "open": [],
+   "merged": [
+    {
+     "n": 18,
+     "title": "Retry the MQTT connection with backoff",
+     "url": "https://github.com/example/home-automation/pull/18",
+     "merged_at": "2026-10-25T03:00:00Z",
+     "author": "demo-owner"
+    }
+   ]
+  }
+ }
+}

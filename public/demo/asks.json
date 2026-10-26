@@ -1,0 +1,36 @@
+{
+ "asks": [
+  {
+   "id": "a1",
+   "project": "api-service",
+   "priority": 1,
+   "status": "open",
+   "added": "2026-10-26T07:25:00Z",
+   "text": "Choose the rate-limit policy for the public API: per key (simpler) or per key and per IP (safer). The migration waits for this."
+  },
+  {
+   "id": "a2",
+   "project": "research",
+   "priority": 2,
+   "status": "open",
+   "added": "2026-10-25T13:00:00Z",
+   "text": "Approve spending up to $15 on the long-context benchmark run (about 400 tasks, two models)."
+  },
+  {
+   "id": "a3",
+   "project": "home-automation",
+   "priority": 3,
+   "status": "open",
+   "added": "2026-10-25T03:00:00Z",
+   "text": "Say whether the thermostat schedule may change on weekends."
+  },
+  {
+   "id": "a4",
+   "project": "api-service",
+   "priority": 2,
+   "status": "closed",
+   "added": "2026-10-24T07:00:00Z",
+   "text": "Pick a name for the new endpoint."
+  }
+ ]
+}

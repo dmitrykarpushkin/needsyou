@@ -1,0 +1,50 @@
+{
+ "agents": [
+  {
+   "id": "s-api-ratelimit",
+   "title": "Rate limiting rollout",
+   "project": "api-service",
+   "status": "waiting",
+   "updated": "2026-10-26T08:35:00Z",
+   "progress": 70,
+   "task": "Middleware is merged behind a flag; the migration of existing keys is prepared",
+   "waiting_on": "the choice of rate-limit policy (per key or per key and IP)."
+  },
+  {
+   "id": "s-api-orders",
+   "title": "Orders pagination",
+   "project": "api-service",
+   "status": "working",
+   "updated": "2026-10-26T08:54:00Z",
+   "progress": 35,
+   "task": "Writing cursor pagination for /orders and the contract tests for it"
+  },
+  {
+   "id": "s-research-bench",
+   "title": "Benchmark runner",
+   "project": "research",
+   "status": "working",
+   "updated": "2026-10-26T08:46:00Z",
+   "progress": 55,
+   "task": "Re-running the grader on the 40 tasks where two judges disagreed"
+  },
+  {
+   "id": "s-home-sensors",
+   "title": "Sensor dashboard",
+   "project": "home-automation",
+   "status": "working",
+   "updated": "2026-10-26T06:40:00Z",
+   "progress": 20,
+   "task": "Mapping the humidity sensors to rooms"
+  },
+  {
+   "id": "s-research-lit",
+   "title": "Literature sweep",
+   "project": "research",
+   "status": "done",
+   "updated": "2026-10-26T00:00:00Z",
+   "progress": 100,
+   "task": "Summarised 12 papers on agent self-verification"
+  }
+ ]
+}

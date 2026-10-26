@@ -1,0 +1,91 @@
+{
+ "items": [
+  {
+   "id": "inst-root",
+   "kind": "instruction",
+   "name": "AGENTS.md (root)",
+   "path": "AGENTS.md",
+   "source": "api-service",
+   "fires": "every session",
+   "about": "Roles, the definition of done, and what needs the owner's yes.",
+   "text": "# Rules for every agent\n\n## Done means\n- every plan criterion passed, with the output attached\n- a fresh verifier that did not see your reasoning found no gap\n- nothing outside the task changed\n\n## Ask first\nMoney, messages to people, production, deletions: wait for an explicit **yes**.\n\n@docs/STYLE.md\n"
+  },
+  {
+   "id": "inst-style",
+   "kind": "instruction",
+   "name": "STYLE.md",
+   "path": "docs/STYLE.md",
+   "source": "api-service",
+   "fires": "imported",
+   "about": "Code style and commit rules.",
+   "text": "# Style\n\n- Small commits, one idea each.\n- Tests next to the code they test.\n- No new dependency without a line in the PR saying why.\n"
+  },
+  {
+   "id": "skill-review",
+   "kind": "skill",
+   "name": "code-review",
+   "path": "skills/code-review/SKILL.md",
+   "source": "user",
+   "fires": "on request",
+   "about": "Reviews a diff for correctness, then for simplicity.",
+   "text": "---\nname: code-review\ndescription: Review the current diff for bugs first, style second.\n---\n\n# Code review\n\n1. Read the diff and the plan.\n2. List correctness problems with file and line.\n3. Only then list simplifications.\n\n| Verdict | Meaning |\n|---|---|\n| pass | no correctness problem found |\n| fail | at least one |\n"
+  },
+  {
+   "id": "skill-papercut",
+   "kind": "skill",
+   "name": "log-papercut",
+   "path": "skills/log-papercut/SKILL.md",
+   "source": "user",
+   "fires": "when a side defect is noticed",
+   "about": "Records a defect outside the task once, instead of fixing it silently.",
+   "text": "# Log a papercut\n\nWrite one line to the backlog with where you saw it and why it matters. Do not fix it in the current task.\n"
+  },
+  {
+   "id": "hook-prepush",
+   "kind": "hook",
+   "name": "pre-push",
+   "path": ".githooks/pre-push",
+   "source": "api-service",
+   "fires": "before every push",
+   "about": "Runs the tests and checks; refuses a red push.",
+   "text": "#!/bin/sh\nset -e\nnpm test\nnpm run typecheck\n"
+  },
+  {
+   "id": "hook-settings",
+   "kind": "hook",
+   "name": "settings.json",
+   "path": ".claude/settings.json",
+   "source": "api-service",
+   "fires": "every session",
+   "about": "Allowed commands and the session-start hook.",
+   "text": "{\n  \"permissions\": { \"allow\": [\"Bash(npm test)\", \"Bash(npm run typecheck)\"] },\n  \"hooks\": { \"SessionStart\": [{ \"command\": \"sh scripts/session-start.sh\" }] }\n}\n"
+  },
+  {
+   "id": "mcp-github",
+   "kind": "mcp",
+   "name": "GitHub",
+   "path": "",
+   "source": "connector",
+   "fires": "",
+   "status": "on",
+   "tools": 24,
+   "transport": "http",
+   "about": "Pull requests, issues and checks.",
+   "text": "Read and write access to the example/* repositories.\n\n- creating PRs: allowed\n- merging: **never** without the owner\n"
+  },
+  {
+   "id": "mcp-calendar",
+   "kind": "mcp",
+   "name": "Calendar",
+   "path": "",
+   "source": "connector",
+   "fires": "",
+   "status": "off",
+   "tools": null,
+   "transport": null,
+   "about": "no description yet",
+   "text": null,
+   "note": "Switched off: no agent needs it yet."
+  }
+ ]
+}

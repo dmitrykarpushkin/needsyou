@@ -1,0 +1,271 @@
+{
+ "project": "research",
+ "updated": "2026-10-26T08:51:00Z",
+ "stages": [
+  {
+   "id": "triage",
+   "role": "triage",
+   "waiting": 3
+  },
+  {
+   "id": "method",
+   "role": "method",
+   "waiting": 1
+  },
+  {
+   "id": "build",
+   "role": "builder",
+   "waiting": 0
+  },
+  {
+   "id": "test",
+   "role": "tester",
+   "waiting": 0
+  },
+  {
+   "id": "apply",
+   "role": "applier",
+   "waiting": 0
+  },
+  {
+   "id": "validate",
+   "role": "validator",
+   "waiting": 0
+  },
+  {
+   "id": "retro",
+   "role": "retro",
+   "waiting": 0
+  }
+ ],
+ "totals": {
+  "active": 3,
+  "parked": 2,
+  "dropped": 1,
+  "done": 3,
+  "ideas": 9
+ },
+ "ideas": [
+  {
+   "id": "idea-001",
+   "title": "cache-tool-results-across-retries-of-the-same-st",
+   "phrase": "Cache tool results across retries of the same step",
+   "why": "Retries re-ran the same slow searches; caching cut a typical retry from 40 s to 6 s.",
+   "priority": 1,
+   "state": "done",
+   "submitted_by": "scout-api",
+   "submitted_at": "2026-10-23T11:00:00Z",
+   "done_at": "2026-10-24T07:00:00Z",
+   "steps": [
+    {
+     "role": "triage",
+     "verdict": "go",
+     "ts": "2026-10-23T12:00:00Z"
+    },
+    {
+     "role": "builder",
+     "verdict": "ok",
+     "ts": "2026-10-23T21:00:00Z"
+    },
+    {
+     "role": "tester",
+     "verdict": "ok",
+     "ts": "2026-10-23T22:00:00Z"
+    },
+    {
+     "role": "validator",
+     "verdict": "ok",
+     "ts": "2026-10-24T07:00:00Z"
+    }
+   ],
+   "last": {
+    "ts": "2026-10-24T07:00:00Z"
+   }
+  },
+  {
+   "id": "idea-002",
+   "title": "give-the-verifier-the-plan's-criteria,-never-the",
+   "phrase": "Give the verifier the plan's criteria, never the builder's notes",
+   "why": "Keeps the check independent: the verifier cannot be talked into agreeing.",
+   "priority": 1,
+   "state": "done",
+   "submitted_by": "news-scout",
+   "submitted_at": "2026-10-21T09:00:00Z",
+   "done_at": "2026-10-22T07:00:00Z",
+   "steps": [
+    {
+     "role": "triage",
+     "verdict": "go",
+     "ts": "2026-10-21T10:00:00Z"
+    },
+    {
+     "role": "builder",
+     "verdict": "ok",
+     "ts": "2026-10-22T05:00:00Z"
+    },
+    {
+     "role": "validator",
+     "verdict": "ok",
+     "ts": "2026-10-22T07:00:00Z"
+    }
+   ],
+   "last": {
+    "ts": "2026-10-22T07:00:00Z"
+   }
+  },
+  {
+   "id": "idea-003",
+   "title": "stop-a-session-that-has-not-reported-for-two-hou",
+   "phrase": "Stop a session that has not reported for two hours and open an ask",
+   "why": null,
+   "priority": 2,
+   "state": "done",
+   "submitted_by": "scout-agents",
+   "submitted_at": "2026-10-20T03:00:00Z",
+   "done_at": "2026-10-20T14:00:00Z",
+   "steps": [
+    {
+     "role": "triage",
+     "verdict": "go",
+     "ts": "2026-10-20T04:00:00Z"
+    },
+    {
+     "role": "builder",
+     "verdict": "ok",
+     "ts": "2026-10-20T13:00:00Z"
+    },
+    {
+     "role": "validator",
+     "verdict": "ok",
+     "ts": "2026-10-20T14:00:00Z"
+    }
+   ],
+   "last": {
+    "ts": "2026-10-20T14:00:00Z"
+   }
+  },
+  {
+   "id": "idea-004",
+   "title": "run-the-pre-push-checks-in-parallel",
+   "phrase": "Run the pre-push checks in parallel",
+   "why": "The hook takes 3 minutes; most checks are independent.",
+   "priority": 2,
+   "state": "active",
+   "submitted_by": "scout-ci",
+   "submitted_at": "2026-10-26T04:00:00Z",
+   "done_at": null,
+   "steps": [
+    {
+     "role": "triage",
+     "verdict": "go",
+     "ts": "2026-10-26T04:20:00Z"
+    },
+    {
+     "role": "method",
+     "verdict": "ok",
+     "ts": "2026-10-26T08:38:00Z"
+    }
+   ],
+   "last": {
+    "ts": "2026-10-26T08:38:00Z"
+   }
+  },
+  {
+   "id": "idea-005",
+   "title": "summarise-each-night's-failures-in-one-morning-m",
+   "phrase": "Summarise each night's failures in one morning message",
+   "why": null,
+   "priority": 2,
+   "state": "active",
+   "submitted_by": "news-scout",
+   "submitted_at": "2026-10-26T05:40:00Z",
+   "done_at": null,
+   "steps": [
+    {
+     "role": "triage",
+     "verdict": "go",
+     "ts": "2026-10-26T08:42:00Z"
+    }
+   ],
+   "last": {
+    "ts": "2026-10-26T08:42:00Z"
+   }
+  },
+  {
+   "id": "idea-006",
+   "title": "price-every-agent-run-and-show-the-spend-per-pro",
+   "phrase": "Price every agent run and show the spend per project",
+   "why": "Needs a decision: which runs count as one project's spend.",
+   "priority": 1,
+   "state": "parked",
+   "submitted_by": "news-scout",
+   "submitted_at": "2026-10-26T03:00:00Z",
+   "done_at": null,
+   "steps": [
+    {
+     "role": "triage",
+     "verdict": "park",
+     "ts": "2026-10-26T04:00:00Z"
+    }
+   ],
+   "last": {
+    "ts": "2026-10-26T04:00:00Z"
+   }
+  },
+  {
+   "id": "idea-007",
+   "title": "let-agents-open-draft-prs-in-the-shared-team-rep",
+   "phrase": "Let agents open draft PRs in the shared team repo",
+   "why": "Touches a repo other people use; needs your yes.",
+   "priority": 2,
+   "state": "parked",
+   "submitted_by": "scout-api",
+   "submitted_at": "2026-10-26T00:00:00Z",
+   "done_at": null,
+   "steps": [
+    {
+     "role": "triage",
+     "verdict": "park",
+     "ts": "2026-10-26T01:00:00Z"
+    }
+   ],
+   "last": {
+    "ts": "2026-10-26T01:00:00Z"
+   }
+  },
+  {
+   "id": "idea-008",
+   "title": "try-a-smaller-model-for-triage",
+   "phrase": "Try a smaller model for triage",
+   "why": null,
+   "priority": 3,
+   "state": "active",
+   "submitted_by": "scout-cli",
+   "submitted_at": "2026-10-26T08:51:00Z",
+   "done_at": null,
+   "steps": [],
+   "last": null
+  },
+  {
+   "id": "idea-009",
+   "title": "record-a-short-video-of-each-ui-change",
+   "phrase": "Record a short video of each UI change",
+   "why": null,
+   "priority": 3,
+   "state": "dropped",
+   "submitted_by": "news-scout",
+   "submitted_at": "2026-10-25T03:00:00Z",
+   "done_at": null,
+   "steps": [
+    {
+     "role": "triage",
+     "verdict": "drop",
+     "ts": "2026-10-25T04:00:00Z"
+    }
+   ],
+   "last": {
+    "ts": "2026-10-25T04:00:00Z"
+   }
+  }
+ ]
+}

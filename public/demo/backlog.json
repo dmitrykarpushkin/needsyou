@@ -1,0 +1,77 @@
+{
+ "project": "api-service",
+ "order": [],
+ "modules": [
+  {
+   "module": "api",
+   "todo": [
+    {
+     "id": "b1",
+     "phrase": "Decide whether the API keeps supporting the v1 auth header after March.",
+     "act": "me",
+     "level": 5
+    },
+    {
+     "id": "b2",
+     "phrase": "Add an alert when the p95 latency of /orders is over 800 ms for 10 minutes.",
+     "act": "agent",
+     "level": 5,
+     "status": "doing"
+    },
+    {
+     "id": "b3",
+     "phrase": "Replace the hand-written OpenAPI file with one generated from the handlers.",
+     "act": "agent",
+     "level": 4
+    },
+    {
+     "id": "b4",
+     "phrase": "Give the staging database its own credentials instead of sharing the CI ones.",
+     "act": "me",
+     "level": 4
+    },
+    {
+     "id": "b5",
+     "phrase": "Remove the unused /legacy/export endpoint.",
+     "act": "agent",
+     "level": 3
+    },
+    {
+     "id": "b6",
+     "title": "refactor-errors-module",
+     "act": "agent",
+     "level": 3
+    }
+   ]
+  },
+  {
+   "module": "agents",
+   "todo": [
+    {
+     "id": "b7",
+     "phrase": "Let the verifier read the CI logs directly instead of a copy pasted by the builder.",
+     "act": "agent",
+     "level": 4
+    },
+    {
+     "id": "b8",
+     "phrase": "Turn off the nightly lint routine: the pre-push hook already runs it.",
+     "act": "me",
+     "level": 3
+    },
+    {
+     "id": "b9",
+     "phrase": "Wait for the model provider to publish batch pricing before re-running the benchmark.",
+     "act": "wait",
+     "level": 3
+    },
+    {
+     "id": "b10",
+     "phrase": "Archive heartbeats older than 30 days.",
+     "act": "agent",
+     "level": 3
+    }
+   ]
+  }
+ ]
+}

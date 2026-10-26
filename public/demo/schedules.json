@@ -1,0 +1,83 @@
+{
+ "timers": [
+  {
+   "name": "Sentinel",
+   "schedule": "every 10 min",
+   "does": "Checks the other services and opens an ask after two failures in a row.",
+   "project": "api-service"
+  },
+  {
+   "name": "PR collector",
+   "schedule": "every 5 min",
+   "does": "Reads open and merged pull requests of every project into prs.json (read-only).",
+   "project": "api-service"
+  },
+  {
+   "name": "Lab runner",
+   "schedule": "every 30 min",
+   "does": "Moves Lab ideas one step along the chain.",
+   "project": "research"
+  },
+  {
+   "name": "Nightly backup",
+   "schedule": "daily 02:00",
+   "does": "Backs up the notes and the data files to object storage.",
+   "project": "home-automation"
+  },
+  {
+   "name": "Thermostat sync",
+   "schedule": "every 2 h 06:00-22:00",
+   "does": "Pushes the heating schedule to the thermostat.",
+   "project": "home-automation"
+  },
+  {
+   "name": "Log rotation",
+   "schedule": "hourly at :15",
+   "does": "Rotates and compresses service logs.",
+   "project": "api-service"
+  }
+ ],
+ "routines": [
+  {
+   "name": "Morning digest",
+   "schedule": "daily 06:00",
+   "does": "One morning message: what broke, what shipped, what waits for you.",
+   "project": "api-service",
+   "last_run": "2026-10-26T06:00:00Z",
+   "last_result": "sent, 4 items"
+  },
+  {
+   "name": "Docs link check",
+   "schedule": "daily 06:30",
+   "does": "Checks the links in the docs and opens an ask for broken ones.",
+   "project": "api-service",
+   "last_run": "2026-10-26T06:30:00Z",
+   "last_result": "no broken links"
+  },
+  {
+   "name": "Weekly review",
+   "schedule": "mon 08:00",
+   "does": "Writes what moved this week per project and what stalled.",
+   "project": "research"
+  },
+  {
+   "name": "Dependency audit",
+   "schedule": "tue, fri 07:00",
+   "does": "Lists outdated and vulnerable dependencies; opens an ask, never a PR.",
+   "project": "api-service",
+   "note": "Last week it hit the API rate limit once."
+  },
+  {
+   "name": "Benchmark re-run",
+   "schedule": "once 2026-10-28 at 10:00",
+   "does": "Re-runs the benchmark after the grader fix.",
+   "project": "research"
+  },
+  {
+   "name": "Incident write-up",
+   "schedule": "on demand",
+   "does": "Drafts an incident note from the journal when asked.",
+   "project": "api-service"
+  }
+ ]
+}
