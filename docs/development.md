@@ -18,11 +18,12 @@ Build with `VITE_DATA_SOURCE=http` and `VITE_DATA_URL=<where your JSON files are
 anywhere. The Vite `base` is relative (`./`), so the page works under any sub-path, including the GitHub Pages path `/needsyou/`.
 What each file must contain: [DATA.md](DATA.md).
 
-## Screenshots
+## Screenshots and the social preview
 
 - `scripts/screenshots.mjs` captures `docs/screenshots/` from `npm run preview` (port 4173).
+- `scripts/social.mjs` renders `docs/social-preview.png` (1280x640) from `docs/screenshots/now-desktop.png`.
 
-It needs Playwright with Chromium, which is not a dependency of the project.
+Both need Playwright with Chromium, which is not a dependency of the project.
 
 ## Continuous integration
 
